@@ -37,7 +37,7 @@ if (cssEl.sheet || cssEl.loaded) { regSW(); } else { cssEl.addEventListener('loa
 <main class='container'>
   <section id='tab-resumo' class='tab'>
     <div class='card'><h2>Avisos de vencimento</h2><div id='alerts' class='stack'></div></div>
-    <div class='card'><h2>Gráfico — progresso das metas</h2><div class='canvas-wrap'><canvas id='chart' width='900' height='360'></canvas></div></div>
+    <div class='card'><h2>Gráfico — progresso das metas</h2><div class='canvas-wrap'><canvas id='chart' style='width:100%;max-width:900px;height:360px'></canvas></div></div>
   </section>
   <section id='tab-entradas' class='tab'>
     <div class='card'><h2>Entradas do mês (Thiago + Adriele)</h2>
@@ -90,10 +90,12 @@ if (cssEl.sheet || cssEl.loaded) { regSW(); } else { cssEl.addEventListener('loa
         <div class='item'>
           <div class='top'><strong>Autoalocação nas novas entradas</strong></div>
           <div id='alocacoes' class='stack'></div>
-          <div class='top'>
+          <div class='top' style='gap:16px;flex-wrap:wrap'>
             <label>Aplicar automaticamente nas novas entradas <input type='checkbox' id='autoApply'></label>
+            <label>Simular sobre <input type='number' id='simValor' step='0.01' inputmode='decimal' value='1000' style='width:120px'> R$</label>
             <button id='saveAlloc' class='primary'>Salvar alocação</button>
           </div>
+          <div id='alocPrev' class='stack'></div>
         </div>
         <div class='item'>
           <div class='top'><strong>Distribuir do saldo disponível</strong><span id='saldoDisp' class='badge'>Saldo disp.: R$ 0,00</span></div>
@@ -110,7 +112,7 @@ if (cssEl.sheet || cssEl.loaded) { regSW(); } else { cssEl.addEventListener('loa
     <input type='file' id='fileImport' accept='application/json'><button id='btnImport'>Importar</button></div>
   </section>
 </main>
-<footer class='bottombar'>FLOW — Finanças da Família Oliveira • v9.2 FIX</footer>
+<footer class='bottombar'>FLOW — Finanças da Família Oliveira • v9.4 FINAL</footer>
 <div class='drawer-overlay' id='drawerOverlay'></div>
 <aside class='drawer' id='drawer' aria-hidden='true'>
   <header><div class='logo-inline' style='width:160px'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 200'>

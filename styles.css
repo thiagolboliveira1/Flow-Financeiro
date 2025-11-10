@@ -17,4 +17,5 @@
 .drawer.show{transform:translateX(0)}.drawer-overlay.show{opacity:1;pointer-events:auto}
 .tab{scroll-margin-top:120px}
 footer.bottombar{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:1px solid var(--line);padding:10px;text-align:center;color:#5A6A8A}
+.canvas-wrap{padding:8px;border:1px dashed var(--line);border-radius:12px;background:#fff}
 @media(print){.topbar,.drawer,.drawer-overlay,button,select,input,canvas{display:none !important}.container{padding:0}.card{border:0}}
